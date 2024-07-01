@@ -7,7 +7,7 @@ A Laravel package for json data encryption and decryption using RSA pair keys.
 You can install the package via Composer:
 
 ```bash
-composer require nauhand/laravel-data-encryption
+composer require paymetrust/laravel-data-encryption
 ```
 ## How to use
 
