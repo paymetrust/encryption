@@ -44,10 +44,3 @@ DataEncryption::encrypt($jsonString, config('app.ssl_public_key_path'));
 ```bash
 DataEncryption::decrypt($encryptedString, config('app.ssl_private_key_path'));
 ```
-## Crédits
-
-- **NAUHAND ALLOU** - Développeur principal - [Email](mailto:olivier.nauhand@gmail.com)
-
-## Licence
-
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
