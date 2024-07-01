@@ -1,6 +1,6 @@
 <?php
 
-namespace Nauhand\LaravelDataEncryption;
+namespace Paymetrust\LaravelDataEncryption;
 
 use Illuminate\Support\ServiceProvider;
 

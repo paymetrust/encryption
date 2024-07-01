@@ -1,6 +1,6 @@
 <?php
 
-namespace Nauhand\LaravelDataEncryption\Services;
+namespace Paymetrust\LaravelDataEncryption\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;

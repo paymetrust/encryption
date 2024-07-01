@@ -1,6 +1,6 @@
 <?php
 
-namespace Nauhand\LaravelDataEncryption\Facades;
+namespace Paymetrust\LaravelDataEncryption\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
