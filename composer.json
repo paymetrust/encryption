@@ -1,5 +1,5 @@
 {
-    "name": "nauhand/laravel-data-encryption",
+    "name": "paymetrust/laravel-data-encryption",
     "description": "A Laravel package for data encryption and decryption using RSA keys",
     "type": "library",
     "require": {
@@ -9,20 +9,19 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Nauhand\\LaravelDataEncryption\\": "src/"
+            "Paymetrust\\LaravelDataEncryption\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Nauhand\\LaravelDataEncryption\\DataEncryptionServiceProvider"
+                "Paymetrust\\LaravelDataEncryption\\DataEncryptionServiceProvider"
             ]
         }
     },
     "authors": [
         {
-            "name": "NAUHAND ALLOU",
-            "email": "olivier.nauhand@gmail.com"
+            "name": "PMT-NAUHAND"
         }
     ],
     "minimum-stability": "dev",
