@@ -77,13 +77,17 @@ class DataEncryptionService
      */
     private function getPublicKeyResource(string $publicPath): OpenSSLAsymmetricKey
     {
-        $publicKey = file_get_contents(storage_path($publicPath));
-        if (is_null($publicKey)) {
+        if (blank($publicPath) || is_null($publicPath)) {
+            throw new RuntimeException("Keygen repository not found");
+        }
+
+        $publicKey = @file_get_contents(storage_path($publicPath));
+        if ($publicKey === false) {
             throw new RuntimeException('Unable to read public key file.');
         }
 
-        $publicKeyResource = openssl_pkey_get_public($publicKey);
-        if (! $publicKeyResource) {
+        $publicKeyResource = @openssl_pkey_get_public($publicKey);
+        if ($publicKeyResource === false) {
             throw new RuntimeException('Invalid public key.');
         }
 
@@ -138,12 +142,16 @@ class DataEncryptionService
      */
     private function getPrivateKeyResource(string $privatePath): OpenSSLAsymmetricKey
     {
-        $privateKey = file_get_contents(storage_path($privatePath));
-        if (is_null($privateKey)) {
+        if (blank($privatePath) || is_null($privatePath)) {
+            throw new RuntimeException("Keygen repository not found");
+        }
+
+        $privateKey = @file_get_contents(storage_path($privatePath));
+        if ($privateKey === false) {
             throw new RuntimeException('Unable to read private key file.');
         }
 
-        $privateKeyResource = openssl_pkey_get_private($privateKey);
+        $privateKeyResource = @openssl_pkey_get_private($privateKey);
         if ($privateKeyResource === false) {
             throw new RuntimeException('Invalid private key.');
         }
